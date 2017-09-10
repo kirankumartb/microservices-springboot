@@ -1,0 +1,36 @@
+eureka:
+ image: springcloud/eureka
+ container_name: eureka
+ ports:
+ - "8761:8761"
+ net: "microservicesnet"
+customer1:
+ image: tirumalakirankumarb/microservices-spring-boot-base
+ container_name: customer1
+ hostname: customer1
+ net: "microservicesnet"
+ ports:
+ - "8080:8080"
+ volumes:
+ - /Springboot:/data
+ command: -jar /data/SimpleMicroService/target/customerbackend-0.0.1-SNAPSHOT.jar
+product1:
+ image: tirumalakirankumarb/microservices-spring-boot-base
+ container_name: product1
+ hostname: product1
+ net: "microservicesnet"
+ ports:
+ - "8081:8080"
+ volumes:
+ - /Springboot:/data
+ command: -jar /data/Product-backend/target/productbackend-0.0.1-SNAPSHOT.jar
+order1:
+ image: tirumalakirankumarb/microservices-spring-boot-base
+ container_name: order1
+ hostname: order1
+ net: "microservicesnet"
+ ports:
+ - "8082:8080"
+ volumes:
+ - /Springboot:/data
+ command: -jar /data/order-backend/target/orderbackend-0.0.1-SNAPSHOT.jar
