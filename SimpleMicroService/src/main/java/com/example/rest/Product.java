@@ -16,6 +16,7 @@ public class Product {
 		this.id = id;
 	}
 
+	
 	public String getSku() {
 		return sku;
 	}

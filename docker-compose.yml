@@ -12,8 +12,8 @@ customer1:
  ports:
  - "8080:8080"
  volumes:
- - /Springboot:/data
- command: -jar /data/SimpleMicroService/target/customerbackend-0.0.1-SNAPSHOT.jar
+ - C:/Users/vaishu/SpringBoot:/data
+ command: -jar /data/customer-backend/target/customerbackend-0.0.1-SNAPSHOT.jar
 product1:
  image: tirumalakirankumarb/microservices-spring-boot-base
  container_name: product1
@@ -22,8 +22,8 @@ product1:
  ports:
  - "8081:8080"
  volumes:
- - /Springboot:/data
- command: -jar /data/Product-backend/target/productbackend-0.0.1-SNAPSHOT.jar
+ - C:/Users/vaishu/SpringBoot:/data
+ command: -jar /data/SimpleMicroService/target/productbackend-0.0.1-SNAPSHOT.jar
 order1:
  image: tirumalakirankumarb/microservices-spring-boot-base
  container_name: order1
@@ -32,5 +32,5 @@ order1:
  ports:
  - "8082:8080"
  volumes:
- - /Springboot:/data
- command: -jar /data/order-backend/target/orderbackend-0.0.1-SNAPSHOT.jar
+ - C:/Users/vaishu/SpringBoot:/data
+ command: -jar /data/Order-backend/target/SimpleMicroService-0.0.1-SNAPSHOT.jar
