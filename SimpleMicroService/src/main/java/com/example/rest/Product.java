@@ -15,7 +15,6 @@ public class Product {
 	public void setId(long id) {
 		this.id = id;
 	}
-
 	
 	public String getSku() {
 		return sku;
